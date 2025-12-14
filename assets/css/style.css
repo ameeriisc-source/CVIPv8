@@ -1,0 +1,70 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI',sans-serif;background:#f4f9ff;color:#102a43}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;top:0;width:100%;
+  background:linear-gradient(90deg,#0f4c81,#1976d2);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 24px;z-index:1000
+}
+.logo{color:#fff;font-size:22px;font-weight:600}
+.menu-toggle{display:none;font-size:26px;background:none;border:none;color:#fff}
+.nav-links{list-style:none;display:flex;gap:18px;margin:0;padding:0}
+.nav-links a{color:#e3f2fd;text-decoration:none;font-weight:500;white-space:nowrap}
+.nav-links a.active,.nav-links a:hover{color:#ffeb3b}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:linear-gradient(rgba(15,76,129,.7),rgba(15,76,129,.7));
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;color:#fff;padding:20px
+}
+.hero h1{font-size:42px}
+.hero h2{font-size:28px}
+
+/* BUTTON */
+.btn-primary{
+  display:inline-block;margin-top:20px;
+  background:#ffeb3b;color:#0f4c81;
+  padding:14px 30px;border-radius:30px;
+  text-decoration:none;font-weight:600
+}
+
+/* SECTIONS */
+.section{padding:90px 12%}
+.section.light{background:#ffffff}
+.section.gradient{background:linear-gradient(135deg,#e3f2fd,#bbdefb)}
+
+.cards{display:flex;gap:30px;justify-content:center;flex-wrap:wrap}
+.card{
+  background:#fff;padding:30px;width:280px;
+  border-radius:16px;
+  box-shadow:0 15px 35px rgba(0,0,0,.12);
+  transition:.3s
+}
+.card:hover{transform:translateY(-10px) scale(1.03)}
+
+/* PAGE HEADER */
+.page-hero{
+  margin-top:80px;
+  background:linear-gradient(90deg,#0f4c81,#1976d2);
+  color:#fff;padding:70px;text-align:center
+}
+
+footer{background:#0f4c81;color:#fff;text-align:center;padding:20px}
+
+/* ANIMATIONS */
+.reveal{opacity:0;transform:translateY(40px);transition:all .9s ease}
+
+/* MOBILE */
+@media(max-width:900px){
+  .nav-links{
+    position:absolute;top:60px;right:0;
+    background:#0f4c81;
+    flex-direction:column;width:240px;display:none
+  }
+  .nav-links.show{display:flex}
+  .menu-toggle{display:block}
+}
